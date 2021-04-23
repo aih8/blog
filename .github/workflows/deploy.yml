@@ -6,7 +6,11 @@ name: Deloy
 # events but only for the master branch
 on:
   push:
+    # hexo branch的push事件
     branches: [ hexo ]
+  schedule:
+    # 定时任务，整点
+    - cron: '0 * * * *'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -33,6 +37,9 @@ jobs:
     
     - name: check npm version
       run: npm --version
+
+    - name: update yiqing.json
+      run: node ./source/outlet/static/updateYiqing.js
     
     - name: Setup Hexo env
       env:
