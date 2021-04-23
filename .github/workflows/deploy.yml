@@ -59,6 +59,7 @@ jobs:
 
   build:
     needs: prepare
+
     # hexo clean && hexo g && hexo d
     - name: clean
       run: ./node_modules/.bin/hexo clean
