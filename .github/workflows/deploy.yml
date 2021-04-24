@@ -52,4 +52,5 @@ jobs:
         npm i
         # hexo clean && hexo g && hexo d
         npm run deploy
+        ls
         cat ./public/index.html
