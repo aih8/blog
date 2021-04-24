@@ -81,5 +81,5 @@ theme: next
 deploy:
   type: git
   repo:
-    github: git@github.com:aih8/aih8.github.io.git,master
+    github: https://github.com/aih8/aih8.github.io.git,master
     gitee: git@gitee.com:aih8/aih8.git,master
