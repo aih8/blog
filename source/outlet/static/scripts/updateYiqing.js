@@ -13,11 +13,9 @@ function getRemoteData(url) {
 
             res.on('end', function () {
                 writeFile(path.resolve(__dirname, './yiqing.json'), html, {flag: 'w+'});
-                process.exitCode = 1;
             });
         }).on('error',function(){
             console.log('出错！');
-            process.exitCode = -1;
         });
     });
 }
