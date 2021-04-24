@@ -23,13 +23,6 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
-
-    - name: Cache multiple paths
-      uses: actions/cache@v2
-      with:
-        path: |
-          **/node_modules
-        key: ${{ runner.os }}-${{ hashFiles('**/lockfiles') }}
     
     # check env version
     - name: check node version
@@ -54,4 +47,4 @@ jobs:
         # install package
         npm i
         # hexo clean && hexo g && hexo d
-        ./node_modules/.bin/hexo clean && ./node_modules/.bin/hexo g && ./node_modules/.bin/hexo d
+        npm run deploy
