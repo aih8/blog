@@ -37,14 +37,12 @@ jobs:
     
     - name: check npm version
       run: npm --version
-
-    - name: update yiqing.json
-      run: node ./source/outlet/static/updateYiqing.js
     
     - name: Setup Hexo env
       env:
         ACTION_DEPLOY_KEY: ${{ secrets.ACTION_DEPLOY_KEY }}
       run: |
+        node ./source/outlet/static/scripts/updateYiqing.js
         # set up private key for deploy
         mkdir -p ~/.ssh/
         echo "$ACTION_DEPLOY_KEY" | tr -d '\r' > ~/.ssh/id_rsa # 配置秘钥
@@ -53,6 +51,10 @@ jobs:
         # set git infomation
         git config --global user.name 'hexo deployer'
         git config --global user.email '907138916@qq.com'
+        # install package
+        npm i
+        # hexo clean && hexo g && hexo d
+        ./node_modules/.bin/hexo clean && ./node_modules/.bin/hexo g && ./node_modules/.bin/hexo d
     
     - name: install packages
       run: npm i
