@@ -11,7 +11,7 @@ tags:
 - 浏览器打开博客地址，发现reponse的数据为空
 - github切换到博客项目的相应分支，文件都存在，貌似很正常，但是文件的size都为0
 - 本地推送hexo编译好的内容是可以正常更新blog，浏览器打开为正常
-- 怀疑是github actions中配置的环境问题，对比下发现node版本不同，本地12.x/actions中14.x
+- 怀疑是github actions中配置的环境问题，对比下发现node版本不同，本地12.x/actions中14.x (github actions中默认使用的最新的，时间久了，就存在本地和actions中node版本存在差异的情况)
 - 更新github actions中的配置，设置node版本为12.x，推送代码，博客展示正常
 - 故可以确定是某个依赖在node14.x的环境下无法正常工作导致的异常
 
