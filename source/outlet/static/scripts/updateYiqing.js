@@ -1,6 +1,6 @@
-import path from "path";
-import https from "https";
-import fs from "fs";
+var https = require('https');
+var fs = require('fs');
+var path = require('path');
 
 function getRemoteData(url) {
   return new Promise(function (resolve, reject) {
