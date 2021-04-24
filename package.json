@@ -4,10 +4,11 @@
   "private": true,
   "scripts": {
     "start": "./node_modules/.bin/hexo s",
-    "update": "git add . && git commit -m 'update' && git push",
-    "deploy": "./node_modules/.bin/hexo clean && ./node_modules/.bin/hexo g && cat ./public/index.html && ./node_modules/.bin/hexo d",
+    "update": "git add . && git commit -m 'update blog' && git push",
+    "deploy": "npm run clean && ./node_modules/.bin/hexo g && ./node_modules/.bin/hexo d",
     "update-yiqing-data": "node ./source/outlet/static/scripts/updateYiqing.js",
-    "ci:local": "npm run update-yiqing-data && npm run deploy"
+    "ci:local": "npm run update-yiqing-data && npm run deploy && npm run clean",
+    "clean": "./node_modules/.bin/hexo clean"
   },
   "hexo": {
     "version": "3.9.0"

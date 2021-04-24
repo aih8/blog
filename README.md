@@ -7,7 +7,7 @@ npm install
 npm start
 
 // git update hexo branch && github actions && master will be updated.
-git update
+npm run update
 ```
 
 ### 目录结构
