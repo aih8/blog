@@ -273,7 +273,7 @@ function setCountPerRow() {
 
     function uncoverItem(index, count) {
         var target = wrap.children().eq(index).get(0);
-        target.innerText = count || '空';
+        target.innerText = count || ' ';
         stateArr[index].isCover = false;
     }
 

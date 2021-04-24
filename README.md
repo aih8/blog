@@ -1,25 +1,13 @@
 ### 命令工具
 ```shell
 // init
-npm install
+yarn install
 
 // server
 npm start
 
 // git update hexo branch && github actions && master will be updated.
 npm run update
-```
-
-```shell script
-# 更新 package.json 中的 hexo 及个插件版本
-cnpm install -g npm-check           # 检查之前安装的插件，都有哪些是可以升级的 
-cnpm install -g npm-upgrade         # 升级系统中的插件
-npm-check
-npm-upgrade
-
-# 更新 hexo 及所有插件
-rm -rf node_modules
-yarn install
 ```
 
 ### 目录结构
