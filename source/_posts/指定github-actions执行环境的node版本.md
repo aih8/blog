@@ -18,6 +18,7 @@ tags:
 <br/>
 <br/>
 下面附上在github actions中设置node版本的方法
+
 ```yaml
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
