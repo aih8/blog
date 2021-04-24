@@ -15,6 +15,9 @@ tags:
 - 更新github actions中的配置，设置node版本为12.x，推送代码，博客展示正常
 - 故可以确定是某个依赖在node14.x的环境下无法正常工作导致的异常
 
+<br/>
+<br/>
+下面附上在github actions中设置node版本的方法
 ```yaml
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
