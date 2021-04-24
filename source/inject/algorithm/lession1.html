@@ -70,6 +70,10 @@ tags:
     #forRight ul li + li {
         border-top: 1px solid #eee;
     }
+
+    .uncovered {
+        background-color: #ccc;
+    }
 </style>
 <!-- <div>
     <input id="numberNode" type="number" placeholder="input count per row">
@@ -274,6 +278,7 @@ function setCountPerRow() {
     function uncoverItem(index, count) {
         var target = wrap.children().eq(index).get(0);
         target.innerText = count || ' ';
+        target.className += 'uncovered';
         stateArr[index].isCover = false;
     }
 
