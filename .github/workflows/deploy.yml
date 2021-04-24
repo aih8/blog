@@ -56,6 +56,6 @@ jobs:
         git config --global user.email '907138916@qq.com'
         # install package
         npm i yarn -g
-        yarn install
+        yarn install --no-optional --verbose
         # hexo clean && hexo g && hexo d
         npm run deploy
