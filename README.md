@@ -1,6 +1,6 @@
 ### 命令工具
 ```shell
-// init
+// init 
 yarn install
 
 // server
