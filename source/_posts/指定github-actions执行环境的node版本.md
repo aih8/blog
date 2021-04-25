@@ -2,7 +2,7 @@
 title: 指定github actions执行环境的node版本
 date: 2021-04-24 12:33:51
 tags:
-- github action
+  - github action
 ---
 
 ## 指定github actions执行环境的node版本
