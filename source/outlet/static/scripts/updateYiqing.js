@@ -12,8 +12,9 @@ function getRemoteData(url) {
       });
 
       res.on('end', function () {
-        writeFile(path.resolve(__dirname, './yiqing.json'), html, {flag: 'w+'});
-        console.log('update 疫情json success。');
+        const p = path.resolve(__dirname, './yiqing.json');
+        writeFile(p, html, {flag: 'w+'});
+        console.log('update 疫情json success。path: ' + p);
       });
     }).on('error', function () {
       console.log('出错！');
