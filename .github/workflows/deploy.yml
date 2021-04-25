@@ -45,7 +45,7 @@ jobs:
         ACTION_DEPLOY_KEY: ${{ secrets.ACTION_DEPLOY_KEY }}
       run: |
         # 更新每日疫情数据
-        node ./source/outlet/static/scripts/updateYiqing.js
+        npm run update-yiqing-data
         # set up private key for deploy
         mkdir -p ~/.ssh/
         echo "$ACTION_DEPLOY_KEY" | tr -d '\r' > ~/.ssh/id_rsa # 配置秘钥
