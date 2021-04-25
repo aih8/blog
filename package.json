@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "./node_modules/.bin/hexo s",
-    "update": "git add . && git commit -m 'updateblog' && git push",
+    "update": "git add . && git commit -m '博客更新' && git push",
     "deploy": "npm run clean && ./node_modules/.bin/hexo g && ./node_modules/.bin/hexo d",
     "update-yiqing-data": "node ./source/outlet/static/scripts/updateYiqing.js",
     "ci:local": "npm run update-yiqing-data && npm run deploy && npm run clean",
