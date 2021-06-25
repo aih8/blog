@@ -1,10 +1,10 @@
 ---
-title: github将博客迁移到子目录下
+title: github将博客迁移到子路径下
 date: 2021-04-25 13:06:05
 tags:
   - 博客
   - 迁移
-  - 子目录
+  - 子路径
 ---
 
 ### 迁移流程
@@ -31,4 +31,4 @@ deploy:
   branch: gh-pages
 ```
 3. 在github上的blog仓库中进行github pages的设置，发布分支置为gh-pages，目录为/(root)
-4. 由于理由github actions进行博客编译，需要设置一些变量，页面路径Settings->Secret，进行参数同步
+4. 由于使用github actions进行博客编译，需要设置一些变量，页面路径Settings->Secret，进行参数同步
