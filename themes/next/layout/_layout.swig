@@ -58,6 +58,10 @@
       </div>
     {% endif %}
 
+    <div class="canvas-wrap" style="position: absolute;width: 100%;height: 100%;top: 0;left: 0;font-size: 0;pointer-events: none;z-index: -1;">
+      <canvas id="canvas-node" style="width: 100%;height: 100%;"></canvas>
+    </div>
+
   </div>
 
   {% include '_scripts/vendors.swig' %}
